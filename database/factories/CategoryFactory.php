@@ -18,7 +18,7 @@ class CategoryFactory extends Factory
     protected $model = Category::class;
     public function definition(): array
     {
-        return ['title' => $this->faker->word,
+        return ['name' => $this->faker->word,
             'description' => $this->faker->sentence,
             //
         ];

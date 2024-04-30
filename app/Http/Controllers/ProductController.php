@@ -23,7 +23,7 @@ class ProductController extends Controller
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'categories' => 'nullable|array',
-            //'categories.*' => 'exists:categories,id', 
+            'categories.*' => 'exists:categories,id', 
             'description' => 'nullable|string',
             'image' => 'nullable|string',
         ]);
