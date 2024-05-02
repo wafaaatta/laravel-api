@@ -15,7 +15,7 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'price', 'stock', 'categories', 'image',
+        'name', 'description', 'price', 'stock', 'image',
     ];
 
     /**
@@ -23,7 +23,13 @@ class Product extends Model
      *
      * @var array
      */
-    protected $casts = [
+   /* protected $casts = [
         'categories' => 'json', 
-    ];
+    ];*/
+
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }
